@@ -3,10 +3,9 @@ import React from 'react'
 const App = () => {
   return (
 
-
-<>
-  <h1>Hello world</h1>
-</>
+<div className='text-center mt-5'>
+<h1>Todo App</h1>
+</div>
   )
 }
 
