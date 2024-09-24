@@ -1,3 +1,25 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+
+
+body{
+    background-color: rgb(241, 245, 252);
+    display: flex; justify-content: space-around; flex-wrap: wrap;
+
+}
+.layoutno{
+  display: flex; justify-content: space-around; flex-wrap: wrap;
+
+
+  background-color: rgb(241, 240, 253);
+} 
+
+
+.tags{
+  color:  rgb(153, 23, 5);
+} 
+
+ 

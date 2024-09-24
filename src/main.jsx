@@ -1,31 +1,47 @@
-import { StrictMode } from 'react'
+
 import { createRoot } from 'react-dom/client'
+import App from './App.jsx'
+import './index.css'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import Todos from './Screens/Todos'
-import Layout from './Layout'
-import Login from './Screens/Login'
-import Register from './Screens/Register'
+import Home from './pages/Home.jsx'
+import Login from './pages/Login.jsx'
+import Register from './pages/Register.jsx'
+import Dashboard from './pages/Dashboard.jsx'
+import SinglePage from './pages/SinglePage.jsx'
+import Profile from './pages/Profile.jsx'
 
 const router = createBrowserRouter([
   {
     path : '/',
-    element : <Layout/>,
+    element : <App/>,
     children : [
       {
-        path : '/Todos',
-        element : <Todos/>
+        path : '',
+        element : <Home/>
       },
       {
-        path : '/Login',
+        path : 'Dashboard',
+        element : <Dashboard/>
+      },
+      {
+        path : 'Login',
         element : <Login/>
       },
       {
-        path : '/Register',
+        path : 'Register',
         element : <Register/>
       },
       {
+        path : 'SinglePage',
+        element : <SinglePage/>
+      },
+      {
+        path : 'Profile',
+        element : <Profile/>
+      },
+      {
         path : '*',
-        element : <h1>Page Not Found</h1> 
+        element : <h1>Page Not Found</h1>
       }
     ]
   }
@@ -33,7 +49,8 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById('root')).render(
   <RouterProvider router={router}>
-    <Layout/>
+     <App />
   </RouterProvider>
-
+   
+ 
 )
